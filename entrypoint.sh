@@ -1,19 +1,20 @@
 #!/bin/bash
 set -ex
 
-RUN_FLUXBOX=${RUN_FLUXBOX:-yes}
-RUN_XTERM=${RUN_XTERM:-yes}
+if [ "${RUN_FLUXBOX,,}" != "true" ]; then
+  rm -f /app/conf.d/fluxbox.conf
+fi
 
-case $RUN_FLUXBOX in
-  false|no|n|0)
-    rm -f /app/conf.d/fluxbox.conf
-    ;;
-esac
+if [ "${RUN_XTERM,,}" != "true" ]; then
+  rm -f /app/conf.d/xterm.conf
+fi
 
-case $RUN_XTERM in
-  false|no|n|0)
-    rm -f /app/conf.d/xterm.conf
-    ;;
-esac
+if [ "${RUN_FIREFOX,,}" != "true" ]; then
+  rm -f /app/conf.d/firefox.conf
+fi
+
+if [ "${RUN_DOOM,,}" != "true" ]; then
+  rm -f /app/conf.d/doom.conf
+fi
 
 exec supervisord -c /app/supervisord.conf

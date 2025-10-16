@@ -1,0 +1,6 @@
+[begin] (Fluxbox)
+    [exec] (Terminal) {xterm}
+    [exec] (Text Editor) {mousepad}
+    [exec] (Firefox) {/usr/bin/firefox}
+    [exec] (DOOM) {/usr/games/doom}
+[end]

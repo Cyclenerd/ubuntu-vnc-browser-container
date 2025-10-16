@@ -1,20 +1,20 @@
 version: '2'
 services:
   ide:
-    image: psharkey/intellij:latest
-#    image: psharkey/netbeans-8.1:latest
+    image: docker.io/psharkey/intellij:latest
     environment:
       - DISPLAY=novnc:0.0
     depends_on:
       - novnc
     networks:
       - x11
-  novnc:  
-    image: theasp/novnc:latest
+  novnc:
+    build: 
+      context: .
     environment:
       # Adjust to your screen size
-      - DISPLAY_WIDTH=1600
-      - DISPLAY_HEIGHT=968
+      - DISPLAY_WIDTH=1280
+      - DISPLAY_HEIGHT=720
     ports:
       - "8080:8080"
     networks:
