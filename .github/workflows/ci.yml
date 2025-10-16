@@ -18,14 +18,9 @@ jobs:
     - name: Run the Docker container
       run: |
         docker run -d -p 8080:8080 novnc:test
+
     - name: Wait for container to start
       run: sleep 10
 
-    - name: Check container status
-      run: docker ps -f name=novnc:test
-
     - name: Check noVNC
       run: curl --retry 10 --retry-delay 5 --retry-connrefused "http://localhost:8080"
-
-    - name: Stop container
-      run: docker stop novnc:test
