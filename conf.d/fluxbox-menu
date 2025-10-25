@@ -1,5 +1,5 @@
 [begin] (Fluxbox)
-    [exec] (Terminal) {xterm}
+    [exec] (Terminal) {xfce4-terminal}
     [exec] (Text Editor) {mousepad}
     [exec] (Firefox) {/usr/bin/firefox}
     [exec] (DOOM) {/usr/games/doom}

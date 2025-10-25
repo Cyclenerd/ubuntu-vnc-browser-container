@@ -5,8 +5,8 @@ if [ "${RUN_FLUXBOX,,}" != "true" ]; then
   rm -f /app/conf.d/fluxbox.conf
 fi
 
-if [ "${RUN_XTERM,,}" != "true" ]; then
-  rm -f /app/conf.d/xterm.conf
+if [ "${RUN_TERMINAL,,}" != "true" ]; then
+  rm -f /app/conf.d/terminal.conf
 fi
 
 if [ "${RUN_FIREFOX,,}" != "true" ]; then

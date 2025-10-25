@@ -12,7 +12,7 @@ This container image is intended to be used for displaying X11 applications from
 * [Fluxbox](https://www.fluxbox.org/) - A small window manager
 * [Firefox](https://www.mozilla.org/en-US/firefox/new/) - A web browser, customize using Firefox [policies.json](https://mozilla.github.io/policy-templates/)
 * [Chocolate Doom](https://www.chocolate-doom.org/wiki/index.php/Chocolate_Doom) - A :feelsgood: DOOM source port
-* [xterm](https://invisible-island.net/xterm/) - A terminal
+* [Xfce Terminal](https://docs.xfce.org/apps/xfce4-terminal/start) - A lightweight and easy to use terminal emulator
 * [Mousepad](https://docs.xfce.org/apps/mousepad/start) - A text editor
 * [supervisord](https://supervisord.org/) - To keep it all running
 
@@ -22,7 +22,7 @@ You can specify the following variables (default):
 
 * `DISPLAY_WIDTH=<width>` (1920)
 * `DISPLAY_HEIGHT=<height>` (1080)
-* `RUN_XTERM={True|False}` (False)
+* `RUN_TERMINAL={True|False}` (False)
 * `RUN_FLUXBOX={True|False}` (True)
 * `RUN_FIREFOX={True|False}` (False)
 * `RUN_DOOM={True|False}` (False)

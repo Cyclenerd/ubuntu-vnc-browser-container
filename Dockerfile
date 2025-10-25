@@ -15,7 +15,7 @@ ENV LANG="C.UTF-8" \
 	PIP_ROOT_USER_ACTION="ignore" \
 	PYTHONUNBUFFERED="True" \
 	RUN_FLUXBOX="True" \
-	RUN_XTERM="False" \
+	RUN_TERMINAL="False" \
 	RUN_FIREFOX="False" \
 	RUN_DOOM="False"
 
@@ -39,7 +39,7 @@ RUN set -ex; \
 		novnc \
 		supervisor \
 		x11vnc \
-		xterm \
+		xfce4-terminal \
 		xvfb \
 		zip && \
 	# Create index start autostart noVNC in Browser
