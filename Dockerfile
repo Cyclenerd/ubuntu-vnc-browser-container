@@ -7,7 +7,7 @@ ENV LANG="C.UTF-8" \
 	DISPLAY_HEIGHT=1080 \
 	DISPLAY_WIDTH=1920 \
 	DISPLAY=:0.0 \
-	HOME="/root" \
+	HOME="/home/ubuntu" \
 	LANG="C.UTF-8" \
 	NO_COLOR=1 \
 	NONINTERACTIVE=1 \
@@ -56,13 +56,21 @@ RUN set -ex; \
 	rm -rf /var/lib/apt/lists/* && \
 	rm -rf /tmp/*               && \
 	# Delete all log file
-	find /var/log -type f -delete
+	find /var/log -type f -delete && \
+	# Set permissions
+	chown -R ubuntu:ubuntu "$HOME" && \
+	touch "/supervisord.log" "/supervisord.pid" && \
+	chown ubuntu:ubuntu "/supervisord.log" "/supervisord.pid"
 
 # Copy the application configuration files
-COPY . /app
+COPY --chown=ubuntu:ubuntu . /app
+
+# Switch to the non-root user
+USER ubuntu
+
 # Create the Fluxbox configuration directory and link the menu file
-RUN mkdir -p "/root/.fluxbox" && \
-	ln "/app/conf.d/fluxbox-menu" "/root/.fluxbox/menu"
+RUN mkdir -p "$HOME/.fluxbox" && \
+	ln -s "/app/conf.d/fluxbox-menu" "$HOME/.fluxbox/menu"
 
 # Set the entrypoint
 CMD ["/app/entrypoint.sh"]
