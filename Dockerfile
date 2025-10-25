@@ -38,6 +38,7 @@ RUN set -ex; \
 		net-tools \
 		novnc \
 		supervisor \
+		thunar \
 		x11vnc \
 		xfce4-terminal \
 		xvfb \

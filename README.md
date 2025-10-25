@@ -12,6 +12,7 @@ This container image is intended to be used for displaying X11 applications from
 * [Fluxbox](https://www.fluxbox.org/) - A small window manager
 * [Firefox](https://www.mozilla.org/en-US/firefox/new/) - A web browser, customize using Firefox [policies.json](https://mozilla.github.io/policy-templates/)
 * [Chocolate Doom](https://www.chocolate-doom.org/wiki/index.php/Chocolate_Doom) - A :feelsgood: DOOM source port
+* [Thunar](https://docs.xfce.org/xfce/thunar/start) - A modern file manager
 * [Xfce Terminal](https://docs.xfce.org/apps/xfce4-terminal/start) - A lightweight and easy to use terminal emulator
 * [Mousepad](https://docs.xfce.org/apps/mousepad/start) - A text editor
 * [supervisord](https://supervisord.org/) - To keep it all running

@@ -1,4 +1,5 @@
 [begin] (Fluxbox)
+    [exec] (File Manager) {thunar}
     [exec] (Terminal) {xfce4-terminal}
     [exec] (Text Editor) {mousepad}
     [exec] (Firefox) {/usr/bin/firefox}
