@@ -1,0 +1,46 @@
+{
+  "policies": {
+    "AutofillAddressEnabled": false,
+    "AutofillCreditCardEnabled": false,
+    "DisableAppUpdate": true,
+    "DisableFeedbackCommands": true,
+    "DisableFirefoxAccounts": true,
+    "DisableFirefoxScreenshots": true,
+    "DisableFirefoxStudies": true,
+    "DisablePocket": true,
+    "DisableProfileImport": true,
+    "DisableTelemetry": true,
+    "DisplayBookmarksToolbar": "never",
+    "DontCheckDefaultBrowser": true,
+    "FirefoxHome": {
+      "Highlights": false,
+      "Locked": true,
+      "Pocket": false,
+      "Search": true,
+      "Snippets": false,
+      "SponsoredPocket": false,
+      "SponsoredStories": false,
+      "SponsoredTopSites": false,
+      "Stories": false,
+      "TopSites": false
+    },
+    "GenerativeAI": {
+      "Chatbot": false,
+      "LinkPreviews": false,
+      "Locked": false,
+      "TabGroups": false
+    },
+    "Homepage": {
+      "Locked": true,
+      "StartPage": "none",
+      "URL": "https://www.nkn-it.de/"
+    },
+    "NoDefaultBookmarks": true,
+    "OfferToSaveLogins": false,
+    "PasswordManagerEnabled": false,
+    "SearchEngines": {
+      "Default": "DuckDuckGo"
+    },
+    "TranslateEnabled": false
+  }
+}

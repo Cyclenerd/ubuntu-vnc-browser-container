@@ -65,6 +65,12 @@ RUN set -ex; \
 # Copy the application configuration files
 COPY --chown=ubuntu:ubuntu . /app
 
+# Create a directory for Firefox policies and move the policies.json file
+# More to read: https://mozilla.github.io/policy-templates/
+RUN mkdir -p "/usr/lib/firefox/distribution" && \
+	mv "/app/conf.d/firefox/policies.json" "/usr/lib/firefox/distribution/" && \
+	chown root:root "/usr/lib/firefox/distribution/policies.json"
+
 # Switch to the non-root user
 USER ubuntu
 

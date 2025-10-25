@@ -10,7 +10,7 @@ This container image is intended to be used for displaying X11 applications from
 * [x11vnc](https://github.com/LibVNC/x11vnc) - A VNC server that scrapes the above X11 server
 * [noNVC](https://novnc.com/info.html) - A HTML5 canvas VNC viewer
 * [Fluxbox](https://www.fluxbox.org/) - A small window manager
-* [Firefox](https://www.mozilla.org/en-US/firefox/new/) - A web browser
+* [Firefox](https://www.mozilla.org/en-US/firefox/new/) - A web browser, customize using Firefox [policies.json](https://mozilla.github.io/policy-templates/)
 * [Chocolate Doom](https://www.chocolate-doom.org/wiki/index.php/Chocolate_Doom) - A :feelsgood: DOOM source port
 * [xterm](https://invisible-island.net/xterm/) - A terminal
 * [Mousepad](https://docs.xfce.org/apps/mousepad/start) - A text editor
