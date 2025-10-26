@@ -77,7 +77,9 @@ USER ubuntu
 
 # Create the Fluxbox configuration directory and link the menu file
 RUN mkdir -p "$HOME/.fluxbox" && \
-	ln -s "/app/conf.d/fluxbox-menu" "$HOME/.fluxbox/menu"
+	ln -s "/app/conf.d/fluxbox-menu" "$HOME/.fluxbox/menu" && \
+	# Set center wallpaper
+	echo '$center $full|/usr/share/images/fluxbox/ubuntu-light.png||:0.0' > "$HOME/.fluxbox/lastwallpaper"
 
 # Set the entrypoint
 CMD ["/app/entrypoint.sh"]
